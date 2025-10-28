@@ -1,5 +1,5 @@
 import discord
-from discord.ext import tasks
+from discord.ext import commands
 import requests
 import json
 import os
@@ -80,3 +80,4 @@ async def on_ready():
 
 
 client.run(TOKEN)
+
