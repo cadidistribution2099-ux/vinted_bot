@@ -1,0 +1,78 @@
+[
+    {
+        "name": "borsa_guess_13e",
+        "query": "Guess",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_furla_13e",
+        "query": "Furla",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_calvinklein_13e",
+        "query": "Calvin Klein",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_longchamp_13e",
+        "query": "Longchamp",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_katespade_13e",
+        "query": "Kate Spade",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_lovemoschino_13e",
+        "query": "Love Moschino",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "borsa_liu_jo_13e",
+        "query": "Liu Jo",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    },
+    {
+        "name": "vestiti_carhartt_13e",
+        "query": "Carhartt",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [1904, 1000, 53, 58],
+        "sizes": {
+            "men": ["M", "L", "XL"],
+            "women": ["XS", "S", "M", "L"]
+        },
+        "channel_id": 1432532143988543611
+    },
+    {
+        "name": "borsa_armani_jeans_13e",
+        "query": "Armani Jeans",
+        "max_price": 13,
+        "conditions": [3, 4],
+        "categories": [5],
+        "channel_id": 1432532105685897216
+    }
+]
