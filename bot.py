@@ -10,7 +10,7 @@ load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
-client = discord.Client(intents=intents)
+bot = commands.Bot(command_prefix="!")
 
 # Carica la configurazione dei feed
 with open("feeds.json", "r", encoding="utf-8") as f:
@@ -80,4 +80,5 @@ async def on_ready():
 
 
 client.run(TOKEN)
+
 
