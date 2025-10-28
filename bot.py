@@ -7,7 +7,6 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
@@ -15,17 +14,15 @@ intents.message_content = True
 
 client = commands.Bot(command_prefix="!", intents=intents)
 
-# For tracking sent items
 sent_items = set()
 
-# Load feeds
 with open("feeds.json", "r") as f:
     feeds = json.load(f)
 
 
 def search_vinted(feed):
     try:
-        url = f"https://www.vinted.it/api/v2/catalog/items"
+        url = "https://www.vinted.it/api/v2/catalog/items"
         params = {
             "search_text": feed["query"],
             "brand_id": feed.get("brand_id", ""),
@@ -50,17 +47,16 @@ def format_message(item):
     title = item["title"]
     price = item["price"]["amount"]
     url = item["url"]
-    photo = item["photos"][0]["url"] if item["photos"] else ""
+    photo = item["photos"][0]["url"] if item.get("photos") else ""
     return f"💥 Nuovo trovato!\n📌 {title}\n💶 {price}€\n🔗 {url}\n🖼️ {photo}"
 
 
 async def check_feeds():
     while True:
         for feed in feeds:
-            channel_id = feed["channel_id"]
-            channel = client.get_channel(channel_id)
+            channel = client.get_channel(feed["channel_id"])
             if not channel:
-                print(f"⚠️ Canale non trovato: {channel_id}")
+                print(f"⚠️ Canale non trovato: {feed['channel_id']}")
                 continue
 
             items = search_vinted(feed)
